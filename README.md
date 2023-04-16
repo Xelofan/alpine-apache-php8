@@ -1,15 +1,15 @@
 # Alpine LAP Server with Extensions
 
-Provides a basic LAP stack using Alpine, Apache2 and PHP7, loading in the various extensions along the way (see Dockerfile for full list).
+Provides a basic LAP stack using Alpine, Apache2 and PHP8, loading in the various extensions along the way (see Dockerfile for full list).
 
 Should allow you to get going with a full LAP stack and support for DB via linked container (such as mysql) with ease, allowing you to fine tune various aspects of the server and php via environment variables.
 
 
 ## Included in this image
 
-bash, apache2, php7, php7-apache2, curl, ca-certificates, git
+bash, apache2, php8, php8-apache2, curl, ca-certificates, git
 
-php7-phar, php7-mcrypt, php7-soap, php7-openssl, php7-gmp, php7-pdo_odbc, php7-json, php7-dom, php7-pdo, php7-zip, php7-mysqli, php7-sqlite3, php7-pdo_pgsql, php7-bcmath, php7-gd, php7-odbc, php7-pdo_mysql, php7-pdo_sqlite, php7-gettext, php7-xmlreader, php7-xmlrpc, php7-bz2, php7-iconv, php7-pdo_dblib, php7-curl, php7-ctype, php7-session, php7-redis.
+php8-phar, php8-pecl-mcrypt, php8-soap, php8-openssl, php8-gmp, php8-pdo_odbc, php8-json, php8-dom, php8-pdo, php8-zip, php8-mysqli, php8-sqlite3, php8-pdo_pgsql, php8-bcmath, php8-gd, php8-odbc, php8-pdo_mysql, php8-pdo_sqlite, php8-gettext, php8-xmlreader, php8-pecl-xmlrpc, php8-bz2, php8-iconv, php8-pdo_dblib, php8-curl, php8-ctype, php8-session, php8-redis.
 
 
 ## Environment Variables
@@ -145,7 +145,7 @@ This will patch the container through to traefik load balancer running from anot
 If you would like to add to this, expand on this, maybe you don't want to map your volume and want to copy files for a production system. You can create your own Dockerfile based on this image...
 
 ```
-FROM ulsmith/alpine-apache-php7
+FROM ulsmith/alpine-apache-php8
 MAINTAINER You <you@youremail.com>
 
 ADD /public /app/public
